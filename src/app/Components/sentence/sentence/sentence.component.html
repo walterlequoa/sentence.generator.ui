@@ -1,0 +1,66 @@
+<div class="container">
+  <h2>Add Sentence</h2>
+</div>
+
+<div class="container">
+  <div class="row">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Part Of Speech</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of result" (click)="onSelectType($event)" class="clickable">
+          <td>
+            {{item}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <button type="button" (click)="onGenerate()" class="btn btn-primary">Generate {{PartOfSpeech}}</button>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12"></div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Words</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of words" (click)="addWord($event)" class="clickable">
+          <td>
+            {{item }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="container">
+  <div class="form-group">
+    <label for="sentence">Sentence:</label>
+    <textarea class="form-control" rows="5" id="sentence">{{word}}</textarea>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <button type="button" (click)="saveSentence()" class="btn btn-primary">Save</button>
+    </div>
+  </div>
+</div>

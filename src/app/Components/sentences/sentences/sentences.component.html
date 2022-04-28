@@ -1,0 +1,17 @@
+<div class="col-lg- px-lg-4">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">User Sentences</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let sentence of sentences">
+                <td>
+                    {{ sentence.words }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<button class="btn btn-primary" routerLink="/sentence" type="button">Add Sentence</button>
